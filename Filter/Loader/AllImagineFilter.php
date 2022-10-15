@@ -20,10 +20,10 @@ class AllImagineFilter implements LoaderInterface
                 $value = isset($options[1]) ? $options[1] : null;
                 $effect = $options[0];
                 switch ($options[0]) {
-                case 'colorize':
-                    $value = $image->palette()->color($options[1]);
-                    break;
-            }
+                    case 'colorize':
+                        $value = $image->palette()->color($options[1]);
+                        break;
+                }
                 $image->effects()->$effect($value);
             }
         }
